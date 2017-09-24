@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* 存放全局变量 */
+/* sass 兼容css 变量 $ 用在属性值 特殊变量：变量 首页sass文件 */
+.header { height: 25px; width: 1200px; min-width: 1000px; background: #58bc58; }
+
+.header .center { width: 1000px; height: 25px; margin: 0 auto; }
+
+.header .center .ul_1 { overflow: hidden; float: left; }
+
+.header .center .ul_1 li { height: 25px; float: left; padding: 0 4px; font-family: "微软雅黑"; }
+
+.header .center .ul_1 li:nth-child(2n) span { border-bottom: 1px solid white; }
+
+.header .center .ul_2 { float: right; }
+
+.header .center .ul_2 li { height: 25px; float: left; padding: 0 5px; font-family: "微软雅黑"; }
+
+.header .center .ul_2 li:nth-child(3) a { color: #FFCC00; }
+
+.header .center .ul_2 li span { padding: 0 4px; }
+
+.header .center .ul_2 li i { font-size: 13px; }
+
+.header .center ul li a { display: block; font-size: 13px; color: white; text-align: center; }
+
+.mainNav { border-bottom: 5px solid #fc0; }
+
+.mainNav ul { list-style: none; padding: 0; margin: 0; overflow: hidden; }
+
+.mainNav li { float: left; padding: 5px 10px; color: #58bc58; font-weight: bold; }
+
+h1, .title { font-size: 24px; padding: 5px 10px; color: #333; border-bottom: 1px solid #ddd; }
+
+h4, .subtitle { color: transparent; text-shadow: none; background-color: transparent; border: 0; }
+
+h4 { color: #000; border: 2px solid #ddd; }
+
+/* @for $var from <start> through <end>（包含end值） @for $var from <start> to <end>（不包含en值） */
+.top10 li { display: inline-block; width: 100px; height: 100px; background-color: #58bc58; }
+
+.top10 li:nth-child(1) { background-color: #6ac36a; }
+
+.top10 li:nth-child(2) { background-color: #7ccb7c; }
+
+.top10 li:nth-child(3) { background-color: #8fd28f; }
+
+.top10 li:nth-child(4) { background-color: #a1d9a1; }
+
+.top10 li:nth-child(5) { background-color: #b3e1b3; }
+
+.top10 li:nth-child(6) { background-color: #c5e8c5; }
+
+.top10 li:nth-child(7) { background-color: #d7efd7; }
+
+.top10 li:nth-child(8) { background-color: #eaf6ea; }
+
+.top10 li:nth-child(9) { background-color: #fcfefc; }
+
+.top10 li:nth-child(10) { background-color: white; }

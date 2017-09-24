@@ -1,0 +1,96 @@
+//$mainColor:#ccc;
+
+// 导入其他sass文件
+@import 'var';
+
+/*
+	sass
+		* 兼容css
+		* 变量
+			* $
+			* 用在属性值
+			* 特殊变量：#{变量}
+	首页sass文件
+ */
+
+// 变量
+$height:25px;
+$dir:top;
+
+
+//单行注释：
+//头部
+.header{
+	height: $height;width: $container;min-width: 1000px;background: $mainColor;
+	.center{
+		width: 1000px;height: $height;margin: 0 auto;
+		.ul_1{
+			overflow: hidden;float: left;
+
+			li{
+				height: $height;padding:0 4px;font-family: "微软雅黑";
+
+				&:nth-child(2n) span{border-bottom: 1px solid white;}
+			}
+		}
+
+		.ul_2{
+			float: right;
+			li{
+				height: $height;float: left;padding:0 5px;font-family: "微软雅黑";
+				&:nth-child(3) a{color: #FFCC00;}
+
+				span{padding:0 4px;}
+
+				i{font-size:13px;}
+			}
+			
+		}
+
+		ul li a{
+			display: block;
+			font-size: 13px;
+			color: white;
+			text-align: center;
+		}
+	}
+}
+
+// 导航条
+// 嵌套
+.mainNav{
+	border-bottom:5px solid #fc0;
+	ul{
+		list-style:none;padding:0;margin:0;overflow:hidden;
+	}
+	li{
+		float:left;padding:5px 10px;color:$mainColor;font-weight:bold;
+	}
+}
+
+// 继承
+h1{font-size:24px;padding:5px 10px;border-bottom:1px solid #ddd;color:#f60;}
+.title{@extend h1}
+
+%ir{
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+h4{
+	color:#000;
+	@extend %ir;
+	border:2px solid #000;
+}
+.subtitle{@extend %ir;}
+
+/*
+	@for $var from <start> through <end>（包含end值）
+    @for $var from <start> to <end>（不包含en值）
+ */
+.top10 li{display:inline-block;width:800px;height:800px;background-color: $mainColor;}
+@for $i from 1 through 10{
+	.top10 li:nth-child(#{$i}){background-color:lighten($mainColor,percentage($i/20))}
+}

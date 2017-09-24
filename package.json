@@ -1,0 +1,32 @@
+{
+  "name": "jiayougouwu",
+  "version": "1.0.0",
+  "description": "项目制作",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.18.13",
+    "fast-deep-equal": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "json-schema-traverse": "^0.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "1705"
+  ],
+  "author": "liangyuyu",
+  "license": "ISC"
+}

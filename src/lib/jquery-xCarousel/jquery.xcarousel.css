@@ -1,0 +1,19 @@
+.xcarousel{position:relative;width: 224px;height: 288px;overflow: hidden;}
+.xcarousel ul{position:absolute;left:0;top:0;overflow: hidden;}
+.xcarousel ul.horizontal li{float:left;}
+.xcarousel ul.fade li{position: absolute;top:0;left:0}
+.xcarousel img{display:block;}
+.xcarousel .page{position:absolute;;left:50%;bottom:10px;transform: translateX(-50%);}
+.xcarousel .page span{display:inline-block;width: 16px;height: 16px;overflow: hidden;background: #333;border-radius: 50%;margin:0 3px;/*text-indent:-1000px;*/color:#fff;font-size:12px;text-align: center;}
+.xcarousel .page span.active{background: #DC0F50;}
+
+.xcarousel > span{position: absolute;top:50%;left:0px;transform:translate(0,-50%);width:30px;height:60px;line-height:60px;text-align:center;background-color: #000;opacity:0.5;color:#fff;}
+.xcarousel .btn-next{left:auto;right:0px;}
+.xcarousel > span:hover{opacity:0.8;}
+
+/*小图*/
+ 
+.xcarousel .small{position:absolute;bottom:0;left:50%;transform:translate(-50%,0);height:40px;overflow: hidden;}
+.xcarousel .small li{float:left;}
+.xcarousel .small img{width:40px;opacity: 0.5}
+.xcarousel .small img.active{border-radius: 50%;opacity: 1;}
