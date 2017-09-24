@@ -113,10 +113,37 @@ header{
 .banner{
 	.rect{
 		float: left;margin-left: 262px;
-		.show{float: left;}
-		.tv{float: left;
-			img{float: left;
-				&:first-child{margin-right: 4px;}
+		.rect_l{float: left;width: 714px;
+			.show{float: left;}
+			.tv{float: left;
+				img{float: left;
+					&:first-child{margin-right: 4px;}
+				}
+			}
+		}
+		
+		.rect_r{
+			float: right;margin-top: 10px;margin-left: 10px;width: 210px;border:1px solid #E5E5E5;
+			img{width: 40px;height: 40px;margin: 20px auto;margin-bottom: 0;}
+			p{text-align: center;height: 22px;line-height: 22px;font-size: 12px;}
+			.signin{display: block;background: #DC0F50;width: 180px;height: 40px;text-align: center;
+				line-height: 40px;color:#fff;margin: 15px auto 0 auto;
+			}
+			a{display:block;text-align: right;height: 30px;line-height: 30px;font-size: 12px;
+				margin-left: 145px;width: 50px;}
+			.dolist{
+				padding: 10px;
+				>p{font-size: 20px;padding-left: 40px;position: relative;padding-top: 15px;
+					border-top:1px solid #E5E5E5;font-weight: bold;
+					i{font-size: 32px;position: absolute;top:10px;left:0;}
+				}
+				ul{padding-top: 40px;
+					li{float: left;padding-top: 40px;position: relative;padding: 10px;height: 46px;
+						p{text-align: center;font-size: 12px;margin: 0;height: 16px;;line-height: 6px;}
+						i{position: absolute;top: -20px;left:11px;font-size: 26px;}
+					}
+				}
+				
 			}
 		}
 	}

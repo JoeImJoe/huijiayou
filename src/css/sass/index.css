@@ -107,10 +107,36 @@ header .header_r .phone:hover div, header .header_r .wechat:hover div { display:
 /*-----------------------------top----------------------------------------------*/
 .banner .rect { float: left; margin-left: 262px; }
 
-.banner .rect .show { float: left; }
+.banner .rect .rect_l { float: left; width: 714px; }
 
-.banner .rect .tv { float: left; }
+.banner .rect .rect_l .show { float: left; }
 
-.banner .rect .tv img { float: left; }
+.banner .rect .rect_l .tv { float: left; }
 
-.banner .rect .tv img:first-child { margin-right: 4px; }
+.banner .rect .rect_l .tv img { float: left; }
+
+.banner .rect .rect_l .tv img:first-child { margin-right: 4px; }
+
+.banner .rect .rect_r { float: right; margin-top: 10px; margin-left: 10px; width: 210px; border: 1px solid #E5E5E5; }
+
+.banner .rect .rect_r img { width: 40px; height: 40px; margin: 20px auto; margin-bottom: 0; }
+
+.banner .rect .rect_r p { text-align: center; height: 22px; line-height: 22px; font-size: 12px; }
+
+.banner .rect .rect_r .signin { display: block; background: #DC0F50; width: 180px; height: 40px; text-align: center; line-height: 40px; color: #fff; margin: 15px auto 0 auto; }
+
+.banner .rect .rect_r a { display: block; text-align: right; height: 30px; line-height: 30px; font-size: 12px; margin-left: 145px; width: 50px; }
+
+.banner .rect .rect_r .dolist { padding: 10px; }
+
+.banner .rect .rect_r .dolist > p { font-size: 20px; padding-left: 40px; position: relative; padding-top: 15px; border-top: 1px solid #E5E5E5; font-weight: bold; }
+
+.banner .rect .rect_r .dolist > p i { font-size: 32px; position: absolute; top: 10px; left: 0; }
+
+.banner .rect .rect_r .dolist ul { padding-top: 40px; }
+
+.banner .rect .rect_r .dolist ul li { float: left; padding-top: 40px; position: relative; padding: 10px; height: 46px; }
+
+.banner .rect .rect_r .dolist ul li p { text-align: center; font-size: 12px; margin: 0; height: 16px; line-height: 6px; }
+
+.banner .rect .rect_r .dolist ul li i { position: absolute; top: -20px; left: 11px; font-size: 26px; }
