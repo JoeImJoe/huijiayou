@@ -2,10 +2,10 @@
 
 header{
 	min-width:1200px;
-	background: #E5E5E5;
+	background: $borderColor;
 	.header_l{
 		float: left;font-size: 12px;line-height: 30px;color:#666;
-		&:hover{color:#DC0F8C;text-decoration: underline;}
+		&:hover{color:$highColor;text-decoration: underline;}
 	}
 	.header_r{
 		float: right;
@@ -13,10 +13,10 @@ header{
 			float: left;
 			a{	
 				color:#666;line-height: 30px;
-				&.active:hover{color:#DC0F8C;text-decoration: underline;}
+				&.active:hover{color:$highColor;text-decoration: underline;}
 				span{padding: 0 10px;font-size:12px;height: 12px;
 					&:hover span{text-decoration: underline;}
-					span{color:#DC0F8C;}
+					span{color:$highColor;}
 				}
 				&:nth-child(4),&nth-child(6):hover{color:#666;text-decoration: none;};
 			 }
@@ -42,22 +42,22 @@ header{
 	}
 }
 .top{
-	border-bottom: 2px solid #DC0F50;
+	border-bottom: 2px solid $mainColor;
 	.top_t{
 		box-sizing:border-box;height: 100px;padding-top: 30px;
 		img{float: left;width: 236px;height: 44px;margin-right: 113px;margin-top: 14px;}
 	
 		.top_t_c{float: left;
-			input{float: left;height: 40px;width: 400px;border: 2px solid #DC0F50;padding-left: 15px;}
-			button{float: left;border:0 none;background: #DC0F50;width: 100px;
+			input{float: left;height: 40px;width: 400px;border: 2px solid $mainColor;padding-left: 15px;}
+			button{float: left;border:0 none;background: $mainColor;width: 100px;
 				height: 44px;outline: none;font-size: 18px;color:#fff;
 			}
 			ul{
 				margin-left: 7px;
 				li{float: left;font-size: 14px;margin-top: 7px;padding-right: 15px;
-					a.active{color: #DC0F50;}
+					a.active{color: $mainColor;}
 					a{color: #999;
-						&:hover{color:#DC0F50;}
+						&:hover{color:$mainColor;}
 					}
 				}
 			}
@@ -65,18 +65,18 @@ header{
 		.top_t_R{
 			position: relative;float: right;margin-right: 72px;
 			.top_t_r{
-				float: right;box-sizing:border-box;width: 120px;height: 44px;border:1px solid #E5E5E5;
+				float: right;box-sizing:border-box;width: 120px;height: 44px;border:1px solid $borderColor;
 				color:#333;line-height: 44px;padding-left: 40px;font-size: 14px;position: relative;z-index: -1;
-				span{display: block;width: 18px;height: 18px;border-radius: 50%;background: #DC0F50;color:#fff;
+				span{display: block;width: 18px;height: 18px;border-radius: 50%;background: $mainColor;color:#fff;
 					line-height: 18px;text-align: center;font-size: 12px;position: absolute;top:-9px;right: -9px;
 					z-index: -1;
 				}
-				i{position: absolute;top:0;left: 8px;font-size: 26px;color: #DC0F50;}
+				i{position: absolute;top:0;left: 8px;font-size: 26px;color: $mainColor;}
 			}
-			/*>i{position: absolute;color:#fff;font-size: 30px;bottom:-15px;left:40%;color:#E5E5E5;}*/
+			/*>i{position: absolute;color:#fff;font-size: 30px;bottom:-15px;left:40%;color:$borderColor;}*/
 			.buycar{
 				display: none;
-				border: 1px solid #E5E5E5;width: 320px;position: absolute;top:45px;right:0;
+				border: 1px solid $borderColor;width: 320px;position: absolute;top:45px;right:0;
 				min-height: 60px;line-height: 60px;padding-left: 80px;box-sizing:border-box;
 				i{position: absolute;top:0;left: 20px;font-size: 36px;color:#999;}
 				span{font-size: 12px; color:#999;}
@@ -89,11 +89,11 @@ header{
 			h2{font-size: 14px;background: #333;width: 233px;height: 40px;line-height: 40px;color:#fff;
 				padding-left: 20px;
 			}
-			ul{position: absolute;height: 560px;border:1px solid #E5E5E5;
+			ul{position: absolute;height: 560px;border:1px solid $borderColor;
 				border-top:0 none;top:42px;left:0;
 				li{
 					a{display:block;color:#333;height: 40px;line-height: 40px;padding-left: 20px;width: 232px;}
-					&:hover{background: #DC0F50;}
+					&:hover{background: $mainColor;}
 					&:hover a{color:#fff;};
 				}
 			}
@@ -101,9 +101,9 @@ header{
 		.nav_r{float: left;margin-left: 34px;
 			li{float: left;padding: 0 20px;height: 40px;line-height: 40px;
 				a{color:#333;font-size: 18px;
-					&:hover{color:#DC0F50;}
+					&:hover{color:$mainColor;}
 				}
-				a.active{color:#DC0F50;}
+				a.active{color:$mainColor;}
 			}
 		}
 	}
@@ -123,22 +123,22 @@ header{
 		}
 		
 		.rect_r{
-			float: right;margin-top: 10px;margin-left: 10px;width: 210px;border:1px solid #E5E5E5;
+			float: right;margin-top: 10px;margin-left: 10px;width: 210px;border:1px solid $borderColor;
 			img{width: 40px;height: 40px;margin: 20px auto;margin-bottom: 0;}
 			p{text-align: center;height: 22px;line-height: 22px;font-size: 12px;}
-			.signin{display: block;background: #DC0F50;width: 180px;height: 40px;text-align: center;
+			.signin{display: block;background: $mainColor;width: 180px;height: 40px;text-align: center;
 				line-height: 40px;color:#fff;margin: 15px auto 0 auto;
 			}
 			a{display:block;text-align: right;height: 30px;line-height: 30px;font-size: 12px;
 				margin-left: 145px;width: 50px;}
 			.dolist{
-				padding: 10px;
+				padding: 10px;padding-bottom: 0px;
 				>p{font-size: 20px;padding-left: 40px;position: relative;padding-top: 15px;
-					border-top:1px solid #E5E5E5;font-weight: bold;
-					i{font-size: 32px;position: absolute;top:10px;left:0;}
+					border-top:1px solid $borderColor;font-weight: bold;color:#666;
+					i{font-size: 32px;position: absolute;top:15px;left:3px;color:#666;}
 				}
 				ul{padding-top: 40px;
-					li{float: left;padding-top: 40px;position: relative;padding: 10px;height: 46px;
+					li{box-sizing:border-box;float: left;padding-top: 40px;position: relative;padding: 10px;height: 46px;
 						p{text-align: center;font-size: 12px;margin: 0;height: 16px;;line-height: 6px;}
 						i{position: absolute;top: -20px;left:11px;font-size: 26px;}
 					}

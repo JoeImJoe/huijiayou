@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* 存放全局变量 */
 /* sass 兼容css 变量 $ 用在属性值 特殊变量：变量 首页sass文件 */
-.header { height: 25px; width: 1200px; min-width: 1000px; background: #58bc58; }
+.header { height: 25px; width: 1200px; min-width: 1000px; background: #DC0F50; }
 
 .header .center { width: 1000px; height: 25px; margin: 0 auto; }
 
@@ -27,7 +27,7 @@
 
 .mainNav ul { list-style: none; padding: 0; margin: 0; overflow: hidden; }
 
-.mainNav li { float: left; padding: 5px 10px; color: #58bc58; font-weight: bold; }
+.mainNav li { float: left; padding: 5px 10px; color: #DC0F50; font-weight: bold; }
 
 h1, .title { font-size: 24px; padding: 5px 10px; border-bottom: 1px solid #ddd; color: #f60; }
 
@@ -36,24 +36,24 @@ h4, .subtitle { color: transparent; text-shadow: none; background-color: transpa
 h4 { color: #000; border: 2px solid #000; }
 
 /* @for $var from <start> through <end>（包含end值） @for $var from <start> to <end>（不包含en值） */
-.top10 li { display: inline-block; width: 800px; height: 800px; background-color: #58bc58; }
+.top10 li { display: inline-block; width: 800px; height: 800px; background-color: #DC0F50; }
 
-.top10 li:nth-child(1) { background-color: #6ac36a; }
+.top10 li:nth-child(1) { background-color: #ef155a; }
 
-.top10 li:nth-child(2) { background-color: #7ccb7c; }
+.top10 li:nth-child(2) { background-color: #f12d6b; }
 
-.top10 li:nth-child(3) { background-color: #8fd28f; }
+.top10 li:nth-child(3) { background-color: #f2457c; }
 
-.top10 li:nth-child(4) { background-color: #a1d9a1; }
+.top10 li:nth-child(4) { background-color: #f45d8d; }
 
-.top10 li:nth-child(5) { background-color: #b3e1b3; }
+.top10 li:nth-child(5) { background-color: #f6759e; }
 
-.top10 li:nth-child(6) { background-color: #c5e8c5; }
+.top10 li:nth-child(6) { background-color: #f78daf; }
 
-.top10 li:nth-child(7) { background-color: #d7efd7; }
+.top10 li:nth-child(7) { background-color: #f9a5bf; }
 
-.top10 li:nth-child(8) { background-color: #eaf6ea; }
+.top10 li:nth-child(8) { background-color: #fabdd0; }
 
-.top10 li:nth-child(9) { background-color: #fcfefc; }
+.top10 li:nth-child(9) { background-color: #fcd4e1; }
 
-.top10 li:nth-child(10) { background-color: white; }
+.top10 li:nth-child(10) { background-color: #feecf2; }
