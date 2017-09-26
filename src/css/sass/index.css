@@ -76,11 +76,47 @@ header .header_r .phone:hover div, header .header_r .wechat:hover div { display:
 
 .top .top_t .top_t_R .top_t_r i { position: absolute; top: 0; left: 8px; font-size: 26px; color: #DC0F50; }
 
-.top .top_t .top_t_R .buycar { display: none; border: 1px solid #E5E5E5; width: 320px; position: absolute; top: 45px; right: 0; min-height: 60px; line-height: 60px; padding-left: 80px; box-sizing: border-box; }
+.top .top_t .top_t_R .buycar { /*display: none;*/ background: #fff; z-index: 2; border: 1px solid #E5E5E5; width: 320px; position: absolute; top: 45px; right: 0; min-height: 60px; line-height: 60px; box-sizing: border-box; }
 
 .top .top_t .top_t_R .buycar i { position: absolute; top: 0; left: 20px; font-size: 36px; color: #999; }
 
-.top .top_t .top_t_R .buycar span { font-size: 12px; color: #999; }
+.top .top_t .top_t_R .buycar > span { padding-left: 80px; font-size: 12px; color: #999; }
+
+.top .top_t .top_t_R .buycar h2 { padding-top: 14px; font-size: 16px; color: #333; margin: 0; height: 24px; line-height: 14px; padding-left: 10px; }
+
+.top .top_t .top_t_R .buycar ul { margin: 0 10px 10px 0; min-height: 288px; border-left: 1px solid #D6D6D6; }
+
+.top .top_t .top_t_R .buycar ul li { padding-bottom: 24px; border-bottom: 1px solid #D6D6D6; }
+
+.top .top_t .top_t_R .buycar ul li a { display: block; float: left; width: 195px; /*overflow: hidden;*/ height: 70px; }
+
+.top .top_t .top_t_R .buycar ul li a img { width: 70px; height: 70px; float: left; margin: 0 0 0 5px; }
+
+.top .top_t .top_t_R .buycar ul li a span { font-size: 12px; line-height: 14px; float: left; width: 120px; padding-top: 10px; color: #333; }
+
+.top .top_t .top_t_R .buycar ul li p { float: right; padding-right: 10px; }
+
+.top .top_t .top_t_R .buycar ul li p span { font-size: 12px; display: block; height: 12px; line-height: 12px; }
+
+.top .top_t .top_t_R .buycar ul li p b { font-size: 12px; color: #DC0F50; font-weight: normal; padding-left: 27px; float: right; height: 12px; line-height: 12px; padding-top: 15px; }
+
+.top .top_t .top_t_R .buycar ul li p b:hover { text-decoration: underline; }
+
+.top .top_t .top_t_R .buycar .carb { height: 53px; background: #E5E5E5; box-sizing: border-box; padding: 10px; }
+
+.top .top_t .top_t_R .buycar .carb div { float: left; width: 160px; }
+
+.top .top_t .top_t_R .buycar .carb div p { font-size: 12px; height: 12px; line-height: 12px; float: left; padding-right: 50px; }
+
+.top .top_t .top_t_R .buycar .carb div p:first-child { padding-bottom: 8px; }
+
+.top .top_t .top_t_R .buycar .carb div p span { font-weight: bold; }
+
+.top .top_t .top_t_R .buycar .carb div p b { color: #DC0F50; font-size: 14px; }
+
+.top .top_t .top_t_R .buycar .carb button { border: 0 none; background: #DC0F50; width: 100px; float: right; height: 30px; outline: none; font-size: 14px; color: #fff; }
+
+.top .top_t .top_t_R .buycar .carb button:hover { background: #E23E72; }
 
 .top .top_nav { padding-top: 30px; }
 
