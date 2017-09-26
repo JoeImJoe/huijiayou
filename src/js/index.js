@@ -1,15 +1,16 @@
 require(['config'],function(){
 	require(['jquery','xcarousel'],function($){
-		// $('.top_t_R').hover(function(){
-		// 	$('.buycar').show();
-		// },function(){
-		// 	$('.buycar').hide();
-		// });
+		$('.top_t_R').hover(function(){
+			$('.buycar').show();
+		},function(){
+			$('.buycar').hide();
+		});
 
 		$('.show').xCarousel({
-			imgs:['img/banner1.jpg','img/banner2.jpg','img/banner3.jpg'],
+			imgs:['img/banner1.jpg','img/banner2.jpg','img/banner3.jpg','img/banner4.jpg'],
 			width:714,
 			height:385,
+			index:3,
 			type:'fade'
 		})
 
@@ -65,6 +66,36 @@ require(['config'],function(){
 			height:310,
 			type:'fade'
 		});
+
+
+		$('.head').load('html/header.html');
+		$('.foot').load('html/footer.html');
+
+		var $totop = $('.totop');
+		$totop.hide();
+		window.onscroll = ()=>{
+			let scrollTop = window.scrollY;
+			if(scrollTop > 200){
+				$totop.fadeIn();
+			}else{
+				$totop.fadeOut();
+			}
+		}
+		$totop.click(function(){
+			console.log(666)
+			let speed = 10;
+			let timer = setInterval(()=>{
+				let scrollTop = window.scrollY;
+				speed = Math.ceil(scrollTop/10);
+				scrollTop -= speed;
+				if(scrollTop <= 10){
+					clearInterval(timer);
+					scrollTop = 0;
+				}
+				window.scrollTo(0,scrollTop);
+			},30);
+		});
+
 
 	})
 })

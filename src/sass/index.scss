@@ -76,7 +76,7 @@ header{
 			}
 			/*>i{position: absolute;color:#fff;font-size: 30px;bottom:-15px;left:40%;color:$borderColor;}*/
 			.buycar{
-				/*display: none;*/background: #fff;z-index: 2;
+				display: none;background: #fff;z-index: 2;
 				border: 1px solid $borderColor;width: 320px;position: absolute;top:45px;right:0;
 				min-height: 60px;line-height: 60px;box-sizing:border-box;
 				i{position: absolute;top:0;left: 20px;font-size: 36px;color:#999;}
@@ -124,13 +124,14 @@ header{
 	.top_nav{
 		padding-top: 30px;
 		.nav_l{float: left;font-size: 14px;position: relative;
-			h2{font-size: 14px;background: #333;width: 233px;height: 40px;line-height: 40px;color:#fff;
-				padding-left: 20px;
+			h2{font-size: 14px;background: #333;width: 216px;height: 40px;line-height: 40px;color:#fff;
+				padding-left: 20px;position: relative;
+				i{position: absolute;top:4px;right: 15px;display: none;}
 			}
-			ul{position: absolute;height: 560px;border:1px solid $borderColor;
+			ul{position: absolute;height: 560px;border:1px solid $borderColor;background: #fff;
 				border-top:0 none;top:42px;left:0;
 				li{
-					a{display:block;color:#333;height: 40px;line-height: 40px;padding-left: 20px;width: 232px;}
+					a{display:block;color:#333;height: 40px;line-height: 40px;padding-left: 20px;width: 214px;}
 					&:hover{background: $mainColor;}
 					&:hover a{color:#fff;};
 				}
@@ -150,7 +151,7 @@ header{
 
 .banner{
 	.rect{
-		float: left;margin-left: 262px;
+		float: left;margin-left: 244px;
 		.rect_l{float: left;width: 714px;
 			.show{float: left;}
 			.tv{float: left;
@@ -162,9 +163,9 @@ header{
 		}
 		
 		.rect_R{
-				float: right;width: 210px;margin-top: 10px;margin-left: 10px;height: 254px;
+				float: right;width: 228px;margin-top: 10px;margin-left: 10px;height: 254px;
 			.rect_r{
-				float: right;width: 210px;border:1px solid $borderColor;
+				float: right;width: 228px;border:1px solid $borderColor;
 				img{width: 40px;height: 40px;margin: 20px auto;margin-bottom: 0;}
 				p{text-align: center;height: 22px;line-height: 22px;font-size: 12px;}
 				.signin{display: block;background: $mainColor;width: 180px;height: 40px;text-align: center;
@@ -190,7 +191,7 @@ header{
 				
 			}
 			.ad{
-				float: right;width: 210px;
+				float: right;width: 228px;
 				p{color:$mainColor;text-align: center;margin-top: 17px;font-size: 16px;
 					padding: 12px 0;border-top:2px solid $mainColor;}
 				img{width: 103px;height: 125px;}
@@ -347,5 +348,28 @@ header{
 	p{font-size: 12px;color:#999;line-height: 22px;height: 22px;
 		&:first-child{padding-top: 15px;}
 		&:last-child{padding-top: 3px;}
+	}
+}
+
+.fix{
+	position: fixed;right: 10px;top:300px;
+	span{width: 60px;height: 60px;display: block;background: #999;margin-bottom: 10px;
+		position: relative;z-index: 3;
+			&:nth-child(1):hover{background: #DC0F50;}
+			&:nth-child(1):hover>div{display: block;}
+			&:nth-child(2):hover>div{display: block;}
+			&:nth-child(2):hover{background: #58bc58;}
+			&:nth-child(3):hover{background: #333;}
+			border-radius: 50%;padding-left: 12px;box-sizing:border-box;
+			>i{font-size: 36px;line-height: 60px;text-align: center;color:#fff;}
+		div{
+			display: none;z-index: 2;background: #fff;
+			padding: 15px;border:1px solid #ddd;position: absolute;top:0px;right:70px;
+			img{width: 120px;height: 120px;}
+			p{margin-top: 10px;text-align: center;font-size: 16px}
+			p.line{padding-bottom: 10px;border-bottom:1px solid #ddd;}
+			.sanjiao{position: absolute;top:90px;left:135px;color: #fff;font-size: 20px;
+			}
+		}
 	}
 }

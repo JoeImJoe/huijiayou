@@ -76,7 +76,7 @@ header .header_r .phone:hover div, header .header_r .wechat:hover div { display:
 
 .top .top_t .top_t_R .top_t_r i { position: absolute; top: 0; left: 8px; font-size: 26px; color: #DC0F50; }
 
-.top .top_t .top_t_R .buycar { /*display: none;*/ background: #fff; z-index: 2; border: 1px solid #E5E5E5; width: 320px; position: absolute; top: 45px; right: 0; min-height: 60px; line-height: 60px; box-sizing: border-box; }
+.top .top_t .top_t_R .buycar { display: none; background: #fff; z-index: 2; border: 1px solid #E5E5E5; width: 320px; position: absolute; top: 45px; right: 0; min-height: 60px; line-height: 60px; box-sizing: border-box; }
 
 .top .top_t .top_t_R .buycar i { position: absolute; top: 0; left: 20px; font-size: 36px; color: #999; }
 
@@ -122,11 +122,13 @@ header .header_r .phone:hover div, header .header_r .wechat:hover div { display:
 
 .top .top_nav .nav_l { float: left; font-size: 14px; position: relative; }
 
-.top .top_nav .nav_l h2 { font-size: 14px; background: #333; width: 233px; height: 40px; line-height: 40px; color: #fff; padding-left: 20px; }
+.top .top_nav .nav_l h2 { font-size: 14px; background: #333; width: 216px; height: 40px; line-height: 40px; color: #fff; padding-left: 20px; position: relative; }
 
-.top .top_nav .nav_l ul { position: absolute; height: 560px; border: 1px solid #E5E5E5; border-top: 0 none; top: 42px; left: 0; }
+.top .top_nav .nav_l h2 i { position: absolute; top: 4px; right: 15px; display: none; }
 
-.top .top_nav .nav_l ul li a { display: block; color: #333; height: 40px; line-height: 40px; padding-left: 20px; width: 232px; }
+.top .top_nav .nav_l ul { position: absolute; height: 560px; border: 1px solid #E5E5E5; background: #fff; border-top: 0 none; top: 42px; left: 0; }
+
+.top .top_nav .nav_l ul li a { display: block; color: #333; height: 40px; line-height: 40px; padding-left: 20px; width: 214px; }
 
 .top .top_nav .nav_l ul li:hover { background: #DC0F50; }
 
@@ -143,7 +145,7 @@ header .header_r .phone:hover div, header .header_r .wechat:hover div { display:
 .top .top_nav .nav_r li a.active { color: #DC0F50; }
 
 /*-----------------------------top----------------------------------------------*/
-.banner .rect { float: left; margin-left: 262px; }
+.banner .rect { float: left; margin-left: 244px; }
 
 .banner .rect .rect_l { float: left; width: 714px; }
 
@@ -155,9 +157,9 @@ header .header_r .phone:hover div, header .header_r .wechat:hover div { display:
 
 .banner .rect .rect_l .tv a:first-child { margin-right: 4px; }
 
-.banner .rect .rect_R { float: right; width: 210px; margin-top: 10px; margin-left: 10px; height: 254px; }
+.banner .rect .rect_R { float: right; width: 228px; margin-top: 10px; margin-left: 10px; height: 254px; }
 
-.banner .rect .rect_R .rect_r { float: right; width: 210px; border: 1px solid #E5E5E5; }
+.banner .rect .rect_R .rect_r { float: right; width: 228px; border: 1px solid #E5E5E5; }
 
 .banner .rect .rect_R .rect_r img { width: 40px; height: 40px; margin: 20px auto; margin-bottom: 0; }
 
@@ -183,7 +185,7 @@ header .header_r .phone:hover div, header .header_r .wechat:hover div { display:
 
 .banner .rect .rect_R .rect_r .dolist ul li i { position: absolute; top: -20px; left: 11px; font-size: 26px; }
 
-.banner .rect .rect_R .ad { float: right; width: 210px; }
+.banner .rect .rect_R .ad { float: right; width: 228px; }
 
 .banner .rect .rect_R .ad p { color: #DC0F50; text-align: center; margin-top: 17px; font-size: 16px; padding: 12px 0; border-top: 2px solid #DC0F50; }
 
@@ -348,3 +350,29 @@ header .header_r .phone:hover div, header .header_r .wechat:hover div { display:
 .footer p:first-child { padding-top: 15px; }
 
 .footer p:last-child { padding-top: 3px; }
+
+.fix { position: fixed; right: 10px; top: 300px; }
+
+.fix span { width: 60px; height: 60px; display: block; background: #999; margin-bottom: 10px; position: relative; z-index: 3; border-radius: 50%; padding-left: 12px; box-sizing: border-box; }
+
+.fix span:nth-child(1):hover { background: #DC0F50; }
+
+.fix span:nth-child(1):hover > div { display: block; }
+
+.fix span:nth-child(2):hover > div { display: block; }
+
+.fix span:nth-child(2):hover { background: #58bc58; }
+
+.fix span:nth-child(3):hover { background: #333; }
+
+.fix span > i { font-size: 36px; line-height: 60px; text-align: center; color: #fff; }
+
+.fix span div { display: none; z-index: 2; background: #fff; padding: 15px; border: 1px solid #ddd; position: absolute; top: 0px; right: 70px; }
+
+.fix span div img { width: 120px; height: 120px; }
+
+.fix span div p { margin-top: 10px; text-align: center; font-size: 16px; }
+
+.fix span div p.line { padding-bottom: 10px; border-bottom: 1px solid #ddd; }
+
+.fix span div .sanjiao { position: absolute; top: 90px; left: 135px; color: #fff; font-size: 20px; }
