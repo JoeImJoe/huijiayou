@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* 存放全局变量 */
+.top_nav .nav_l ul { display: none; z-index: 3; }
+
+.top_nav .nav_l h2 i { display: block !important; }
+
+.top_nav .nav_l:hover i { display: none !important; }
+
+.top_nav .nav_l:hover > ul { display: block; }
+
+.main h2 { width: 1170px; padding: 0 15px; height: 40px; line-height: 40px; font-weight: normal; font-size: 14px; color: #333; }
+
+.main .show { padding: 29px; border: 1px solid #D6D6D6; }
+
+.main .show .show_l { float: left; }
+
+.main .show .show_l .small { width: 64px; height: 464px; float: left; margin-right: 20px; }
+
+.main .show .show_l .small span { display: block; width: 64px; height: 12px; box-sizing: border-box; padding-left: 20px; }
+
+.main .show .show_l .small span i { font-size: 9px; color: #333; }
+
+.main .show .show_l .small div { height: 444px; }
+
+.main .show .show_l .small div ul li { padding: 5px 0; }
+
+.main .show .show_l .small div ul li img { width: 63px; height: 63px; }
+
+.main .show .show_l .small div ul li img:hover { border: 1px solid #DC0F50; }
+
+.main .show .show_l .small div ul li img.active { border: 1px solid #DC0F50; }
+
+.main .show .show_l .big { width: 460px; height: 460px; float: left; }
+
+.main .show .show_l .big img { width: 460px; height: 460px; }
+
+.main .show .show_r { float: right; }
+
+.main .show .show_r h3 { padding: 7px 0; border-bottom: 1px solid #E5E5E5; width: 550px; height: 69px; box-sizing: border-box; font-size: 22px; font-weight: normal; color: #333; }
+
+.main .show .show_r .bd { padding: 5px 0; box-sizing: border-box; width: 550px; overflow: hidden; }
+
+.main .show .show_r .bd .price { width: 550px; height: 57px; overflow: hidden; position: relative; }
+
+.main .show .show_r .bd .price del { display: block; color: #666; font-size: 18px; line-height: 16px; }
+
+.main .show .show_r .bd .price b { color: #dc0f50; font-size: 30px; font-weight: normal; text-align: left; }
+
+.main .show .show_r .bd .price a { position: absolute; color: #c06; font-size: 14px; line-height: 14px; top: 25px; right: 27px; }
+
+.main .show .show_r .bd .price a i { position: absolute; right: -24px; top: 2px; }
+
+.main .show .show_r .bd .num, .main .show .show_r .bd .sale { width: 550px; height: 40px; margin-top: 10px; overflow: hidden; }
+
+.main .show .show_r .bd .num b, .main .show .show_r .bd .sale b { font-size: 12px; color: #666; display: block; width: 50px; float: left; height: 40px; line-height: 40px; font-weight: normal; }
+
+.main .show .show_r .bd .num span, .main .show .show_r .bd .sale span { margin-left: 15px; color: #666; font-size: 12px; line-height: 40px; }
+
+.main .show .show_r .bd .sale { margin: 0; }
+
+.main .show .show_r .bd .number b { font-size: 12px; color: #666; display: block; width: 62px; float: left; height: 40px; line-height: 40px; font-weight: normal; }
+
+.main .show .show_r .bd .number span { padding-top: 10px; overflow: hidden; display: block; }
+
+.main .show .show_r .bd .number span button { float: left; }
+
+.main .show .show_r .bd .number span input { float: left; width: 30px; padding-left: 24px; height: 18px; border: 0 none; border: 1px solid #D6D5D3; }
+
+.main .show .show_r .bd .number span button { height: 20px; width: 15px; border: 1px solid #E8E8E8; background: #E8E8E8; text-align: center; outline: none; }
+
+.main .show .show_r .bd .apply { width: 550px; padding-left: 0; float: left; }
+
+.main .show .show_r .bd .apply span { margin-right: 15px; color: #333; font-size: 15px; line-height: 30px; }
+
+.main .show .show_r .bd .btn { margin-top: 9px; }
+
+.main .show .show_r .bd .btn button { float: left; border: 0 none; background: #DC0F50; width: 160px; height: 44px; outline: none; font-size: 16px; color: #fff; margin-right: 10px; }
+
+.main .show .show_r .bd .btn button:first-child { background: #FEA829; }
+
+.main .show .show_r .bd .btn button:hover { background: #E23E72; }
+
+.main .contenter { margin-top: 12px; }
+
+.main .contenter .tab .header { width: 482px; }
+
+.main .contenter .tab .header li { float: left; border-top: 1px solid #E5E5E5; border-bottom: 1px solid #E5E5E5; width: 160px; height: 50px; line-height: 50px; font-size: 20px; text-align: center; background: #F5F5F5; }
+
+.main .contenter .tab .header li:first-child { border-left: 1px solid #E5E5E5; }
+
+.main .contenter .tab .header li:last-child { border-right: 1px solid #E5E5E5; }
+
+.main .contenter .tab .header li.active { background: #fff; color: #DC0F50; border-top-color: #DC0F50; border-bottom: 0 none; }
+
+.main .contenter .content { border: 1px solid #E5E5E5; height: 500px; padding: 40px; }

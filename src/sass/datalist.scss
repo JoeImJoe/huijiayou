@@ -14,6 +14,7 @@
 	.main_l{padding-top: 23px;float: left;width: 957px;box-sizing:border-box;
 		h2{font-weight: normal;font-size:14px; height: 24px;line-height: 24px;}
 		.term{border:1px solid #E5E5E5;margin-bottom: 20px;
+			.termt{border-bottom: 1px dashed #E5E5E5;}
 			.termt,.termb{
 				span{background: #F1F1F1;width: 93px;min-height: 60px;float: left;
 					font-size: 14px;font-weight: bold;line-height: 60px;padding-left: 10px;
@@ -42,7 +43,7 @@
 						input{display: inline-block;width: 50px;border:0 none;height: 24px;
 							border:1px solid #D6D6D6;padding-left: 5px;}
 						button{display:inline-block;border:0 none;background: $mainColor;width: 50px;
-								height: 24px;outline: none;font-size: 12px;color:#fff;
+								height: 24px;outline: none;font-size: 12px;color:#fff;margin-left: 15px;
 								&:hover{background:#E23E72;}
 							}
 					}
@@ -63,6 +64,42 @@
 							del{font-size: 14px;float: right;color:#999;margin-right: 15px;}
 						}
 						span{color:#666;font-size: 14px;}
+					}
+				}
+			}
+		}
+		.page{margin: 0 138px 34px 140px;
+			p{display: inline-block;
+				button{display:inline-block;border:0 none;background: #FAFAFA;width: 38px;
+					height: 35px;outline: none;font-size: 14px;color:#666;margin-left: 4px;border:1px solid #E5E5E5;
+					&:hover{background:#DC0F50;color:#fff;border-color:#DC0F50; }
+					&.active{background:#DC0F50;color:#fff;border-color:#DC0F50; }
+					&:first-child,&:last-child{width: 75px;};
+				}
+				span{font-size: 14px;color:#666;margin-left: 4px;height: 37px;
+					input{display: inline-block;width: 23px;height: 35px;border:0 none;
+						border:1px solid #E5E5E5;padding-left: 12px;}
+					b{font-weight: normal;}
+				}
+			}
+		}
+	}
+	.main_r{float: right;
+		div{width: 233px;padding-top: 21px;
+			h2{float: left;font-size: 20px;color:#333;margin-right: 22px;font-weight: normal;}
+			h3{border-bottom: 1px solid $borderColor;float: right;width: 130px;}
+		}
+		ul{
+			li{height: 105px;box-sizing:border-box;border-bottom: 1px solid $borderColor;
+				width: 225px;padding:10px;
+				a{display: block;overflow: hidden;width: 225px;height: 82px;
+					img{width: 80px;height: 80px;float: left;}
+					first{position: absolute;top: 0;left: 0;background:url("../img/first.png") no-repeat;
+							width: 23px;height: 24px;display: block;
+						}
+					div{width: 130px;float: right;height: 80px;box-sizing:border-box;padding-top: 0;
+						p{font-size: 14px;color:#333;margin-bottom: 5px;}
+						span{color:#DC0F76;font-size: 18px;}
 					}
 				}
 			}

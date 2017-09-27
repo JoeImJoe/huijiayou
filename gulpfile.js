@@ -17,7 +17,7 @@ gulp.task('compileSass',function(){
 
 gulp.task('jtSass',function(){
 	// 监听home.scss文件，如果有修改,则自动自动compileSass任务
-	gulp.watch(['./src/sass/home.scss','./src/sass/index.scss','./src/sass/base.scss'],['compileSass']);
+	gulp.watch('./src/sass/*.scss',['compileSass']);
 });
 
 

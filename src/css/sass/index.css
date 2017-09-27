@@ -255,7 +255,7 @@ header .header_r .phone:hover div, header .header_r .wechat:hover div { display:
 
 .main1 div.xcarousel .page span.active, .main2 div.xcarousel .page span.active, .main3 div.xcarousel .page span.active, .main4 div.xcarousel .page span.active, .main5 div.xcarousel .page span.active { background: #999; }
 
-.main1 .main_t, .main2 .main_t, .main3 .main_t, .main4 .main_t, .main5 .main_t { margin-top: 50px; margin-bottom: 20px; }
+.main1 .main_t, .main2 .main_t, .main3 .main_t, .main4 .main_t, .main5 .main_t { margin-top: 50px; margin-bottom: 20px; height: 25px; }
 
 .main1 .main_t p, .main2 .main_t p, .main3 .main_t p, .main4 .main_t p, .main5 .main_t p { font-size: 20px; color: #000; font-weight: normal; display: inline-block; width: 908px; }
 

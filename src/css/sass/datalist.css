@@ -14,6 +14,8 @@
 
 .main .main_l .term { border: 1px solid #E5E5E5; margin-bottom: 20px; }
 
+.main .main_l .term .termt { border-bottom: 1px dashed #E5E5E5; }
+
 .main .main_l .term .termt span, .main .main_l .term .termb span { background: #F1F1F1; width: 93px; min-height: 60px; float: left; font-size: 14px; font-weight: bold; line-height: 60px; padding-left: 10px; box-sizing: border-box; }
 
 .main .main_l .term .termt b, .main .main_l .term .termb b { float: right; width: 66px; height: 60px; line-height: 60px; font-size: 14px; font-weight: normal; position: relative; }
@@ -40,7 +42,7 @@
 
 .main .main_l .filter ul li:last-child input { display: inline-block; width: 50px; border: 0 none; height: 24px; border: 1px solid #D6D6D6; padding-left: 5px; }
 
-.main .main_l .filter ul li:last-child button { display: inline-block; border: 0 none; background: #DC0F50; width: 50px; height: 24px; outline: none; font-size: 12px; color: #fff; }
+.main .main_l .filter ul li:last-child button { display: inline-block; border: 0 none; background: #DC0F50; width: 50px; height: 24px; outline: none; font-size: 12px; color: #fff; margin-left: 15px; }
 
 .main .main_l .filter ul li:last-child button:hover { background: #E23E72; }
 
@@ -63,3 +65,43 @@
 .main .main_l .goods ul li a p del { font-size: 14px; float: right; color: #999; margin-right: 15px; }
 
 .main .main_l .goods ul li a span { color: #666; font-size: 14px; }
+
+.main .main_l .page { margin: 0 138px 34px 140px; }
+
+.main .main_l .page p { display: inline-block; }
+
+.main .main_l .page p button { display: inline-block; border: 0 none; background: #FAFAFA; width: 38px; height: 35px; outline: none; font-size: 14px; color: #666; margin-left: 4px; border: 1px solid #E5E5E5; }
+
+.main .main_l .page p button:hover { background: #DC0F50; color: #fff; border-color: #DC0F50; }
+
+.main .main_l .page p button.active { background: #DC0F50; color: #fff; border-color: #DC0F50; }
+
+.main .main_l .page p button:first-child, .main .main_l .page p button:last-child { width: 75px; }
+
+.main .main_l .page p span { font-size: 14px; color: #666; margin-left: 4px; height: 37px; }
+
+.main .main_l .page p span input { display: inline-block; width: 23px; height: 35px; border: 0 none; border: 1px solid #E5E5E5; padding-left: 12px; }
+
+.main .main_l .page p span b { font-weight: normal; }
+
+.main .main_r { float: right; }
+
+.main .main_r div { width: 233px; padding-top: 21px; }
+
+.main .main_r div h2 { float: left; font-size: 20px; color: #333; margin-right: 22px; font-weight: normal; }
+
+.main .main_r div h3 { border-bottom: 1px solid #E5E5E5; float: right; width: 130px; }
+
+.main .main_r ul li { height: 105px; box-sizing: border-box; border-bottom: 1px solid #E5E5E5; width: 225px; padding: 10px; }
+
+.main .main_r ul li a { display: block; overflow: hidden; width: 225px; height: 82px; }
+
+.main .main_r ul li a img { width: 80px; height: 80px; float: left; }
+
+.main .main_r ul li a first { position: absolute; top: 0; left: 0; background: url("../img/first.png") no-repeat; width: 23px; height: 24px; display: block; }
+
+.main .main_r ul li a div { width: 130px; float: right; height: 80px; box-sizing: border-box; padding-top: 0; }
+
+.main .main_r ul li a div p { font-size: 14px; color: #333; margin-bottom: 5px; }
+
+.main .main_r ul li a div span { color: #DC0F76; font-size: 18px; }
