@@ -92,4 +92,10 @@
 
 .main .contenter .tab .header li.active { background: #fff; color: #DC0F50; border-top-color: #DC0F50; border-bottom: 0 none; }
 
-.main .contenter .content { border: 1px solid #E5E5E5; height: 500px; padding: 40px; }
+.main .contenter .content { border: 1px solid #E5E5E5; min-height: 500px; padding: 40px; }
+
+.main .contenter .content h3 { height: 30px; line-height: 30px; font-size: 14px; color: #DC0F50; font-weight: normal; }
+
+.main .contenter .content h3:first-child { padding-bottom: 30px; }
+
+.main .contenter .content p { line-height: 30px; padding-bottom: 30px; font-size: 14px; }

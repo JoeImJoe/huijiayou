@@ -5,7 +5,8 @@ require.config({
 	paths:{
 		jquery:'../lib/jquery-3.1.1',
 		xcarousel:'../lib/jquery-xCarousel/jquery.xcarousel',
-		xzoom:'../lib/xzoom/xzoom'
+		xzoom:'../lib/xzoom/xzoom',
+		common:'common'
 	},
 
 	// 配置依赖

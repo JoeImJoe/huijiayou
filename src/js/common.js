@@ -26,6 +26,20 @@ define(['jquery'],function($){
 				height:$(selector).height()
 			}
 			
+		},
+		yanzhengma:function (num){
+			if(num === undefined){
+				num = 4;
+			}
+			var arr = 'abcdefghijklmnopqrstuvwxyz0123456789'.split('');
+
+			// 循环获取验证码
+			var res = '';
+			for(var i=0;i<num;i++){
+				var idx = parseInt(Math.random()*arr.length);
+				res += arr[idx];
+			}
+			return res;
 		}
 
 	}

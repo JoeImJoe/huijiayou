@@ -93,6 +93,11 @@
 				}
 			}
 		}
-		.content{border:1px solid #E5E5E5;height: 500px;padding: 40px;}
+		.content{border:1px solid #E5E5E5;min-height: 500px;padding: 40px;
+			h3{height: 30px;line-height: 30px;font-size: 14px;color:#DC0F50;font-weight: normal;
+				&:first-child{padding-bottom: 30px;}}
+			p{line-height: 30px;padding-bottom: 30px;font-size: 14px;
+			}
+		}
 	}
 }

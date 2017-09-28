@@ -15,12 +15,12 @@ require(['config'],function(){
 		})
 
 
-		var endTime = Date.parse('2017-9-25 20:29:00');//时间只能是同天的时间
+		var endTime = Date.parse('2017-9-29 23:29:00');//时间只能是同天的时间
 		var daojishi = setInterval(function(){
 			var nowTime = Date.now();
 			var offset = parseInt((endTime - nowTime)/1000);// 计算时间差 得到秒数
 
-			console.log(offset);
+			// console.log(offset);
 			if(offset<0){//判断是否结束
 				// $('.showlist').hide();
 				$('.end').show();
@@ -94,6 +94,43 @@ require(['config'],function(){
 				}
 				window.scrollTo(0,scrollTop);
 			},30);
+		});
+
+		$.ajax({
+			url:"api/goodslist.php",
+			type:"get",
+			success:function(res){
+				console.log($.parseJSON(res));//从php拿到数据
+				var $res = $.parseJSON(res);
+				var html = $.map($res,function(item,idx){
+					return `	<li>
+								<a href="#"><img src="${item.imgurl}">
+								<span>${item.discount}折</span>
+								<b>${item.title}</b>
+								<p>${item.saleprice}<del>${item.price}</del></p>
+								<strong><p>立即</p><p>抢购</p></strong>
+								</a>
+							</li>`
+				}).join('');
+				
+				$('.showlist').append(html).width($res.length*233);
+				// console.log(233*5)
+				var idx = 0;
+				$('.livenext').click(function(){
+					idx++;
+					$('.showlist').stop().animate({left:-idx*1165});
+					console.log(idx)
+					if(idx>=3){
+						idx=0;
+					}
+				})
+				$('.liveprev').click(function(){
+					if(idx<=0){idx=3}
+					$('.showlist').stop().animate({left:-idx*1165});
+					console.log(idx)
+						idx--;
+				})
+			}
 		});
 
 

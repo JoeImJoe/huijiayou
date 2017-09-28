@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* 存放全局变量 */
+.top_nav .nav_l ul { display: none; z-index: 3; }
+
+.top_nav .nav_l h2 i { display: block !important; }
+
+.top_nav .nav_l:hover i { display: none !important; }
+
+.top_nav .nav_l:hover > ul { display: block; }
+
+.reg .container .main { padding: 80px; }
+
+.reg .container .main .reg_r { float: right; padding-top: 40px; margin-bottom: 75px; }
+
+.reg .container .main .reg_r a { display: block; }
+
+.reg .container .main .reg_r a img { width: 448px; height: 336px; }
+
+.reg .container .main .reg_l { float: left; width: 590px; height: 420px; box-sizing: border-box; }
+
+.reg .container .main .reg_l label { overflow: hidden; float: left; width: 590px; margin-bottom: 19px; }
+
+.reg .container .main .reg_l label input { float: left; }
+
+.reg .container .main .reg_l label b { float: left; font-weight: normal; font-size: 12px; color: #666; height: 40px; line-height: 40px; position: relative; width: 80px; margin-right: 12px; text-align: right; }
+
+.reg .container .main .reg_l label b i { position: absolute; top: 0; left: 0; font-size: 14px; color: #DC0F50; }
+
+.reg .container .main .reg_l label a, .reg .container .main .reg_l label span { float: left; width: 110px; height: 40px; }
+
+.reg .container .main .reg_l label > a { background: #DC0F50; width: 110px; height: 40px; outline: none; font-size: 14px; color: #fff; line-height: 40px; text-align: center; }
+
+.reg .container .main .reg_l label > a:hover { background: #E23E72; }
+
+.reg .container .main .reg_l label span { border: 1px solid #D6D6D6; border-left: 0 none; height: 38px; line-height: 38px; font-size: 30px; text-align: center; width: 108px; }
+
+.reg .container .main .reg_l label .checkbox { width: 13px; height: 13px; display: inline-block; }
+
+.reg .container .main .reg_l input { width: 265px; height: 20px; display: block; border: 0 none; border: 1px solid #D6D6D6; padding: 9px 20px 9px 20px; }
+
+.reg .container .main .reg_l .reqcode, .reg .container .main .reg_l .code { width: 140px; margin-right: 15px; }
+
+.reg .container .main .reg_l p { font-size: 14px; color: #666; }
+
+.reg .container .main .reg_l p input { width: 13px; height: 13px; display: inline-block; }
+
+.reg .container .main .reg_l p a { font-size: 14px; color: #666; }
+
+.reg .container .main .reg_l p a.reg { margin-left: 60px; }
+
+.reg .container .main .reg_l > .toreg { background: #DC0F50; width: 305px; border: 0 none; display: block; height: 40px; outline: none; font-size: 16px; color: #fff; line-height: 40px; text-align: center; margin-left: 95px; margin-bottom: 10px; }
+
+.reg .container .main .reg_l > .toreg:hover { background: #E23E72; }
+
+.reg .container .main .reg_l .tologin { font-size: 16px; color: #666; text-decoration: underline; margin-left: 256px; }
