@@ -50,7 +50,7 @@
 
 .main .main_l .goods ul { width: 958px; box-sizing: border-box; padding: 0 10px 30px 10px; }
 
-.main .main_l .goods ul li { float: left; margin-bottom: 30px; }
+.main .main_l .goods ul li { float: left; margin-bottom: 30px; height: 319px; }
 
 .main .main_l .goods ul li a { display: block; position: relative; width: 234px; }
 
@@ -58,7 +58,7 @@
 
 .main .main_l .goods ul li a .jingkou { width: 24px; height: 24px; position: absolute; top: 0; left: 0; }
 
-.main .main_l .goods ul li a b { font-size: 14px; font-weight: normal; width: 214px; color: #333; }
+.main .main_l .goods ul li a b { font-size: 14px; font-weight: normal; width: 214px; color: #333; height: 30px; display: inline-block; }
 
 .main .main_l .goods ul li a p { font-size: 18px; overflow: hidden; color: #E11F24; }
 
@@ -102,6 +102,6 @@
 
 .main .main_r ul li a div { width: 130px; float: right; height: 80px; box-sizing: border-box; padding-top: 0; }
 
-.main .main_r ul li a div p { font-size: 14px; color: #333; margin-bottom: 5px; }
+.main .main_r ul li a div p { font-size: 14px; color: #333; margin-bottom: 5px; height: 55px; overflow: hidden; }
 
 .main .main_r ul li a div span { color: #DC0F76; font-size: 18px; }

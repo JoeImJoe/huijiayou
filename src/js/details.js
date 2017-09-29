@@ -1,6 +1,19 @@
 require(['config'],function(){
 	require(['jquery','xzoom'],function($){
 		
+		$('.head').load('./header.html',function(){
+			//加载完成后执行
+			$('.top_t_R').hover(function(){
+				$('.buycar').show();
+			},function(){
+				$('.buycar').hide();
+			});
+
+		});
+		
+		$('.foot').load('./footer.html');
+
+		
 
 		$('.filter').on('click','ul li',function(){
 			$(this).addClass('active').siblings('li').removeClass('active');
@@ -32,7 +45,7 @@ require(['config'],function(){
 			},30);
 		});
 	
-		xZoom();
+		// xZoom();
 		$('.small').on('mousemove','ul li img',function(){
 			 $('.big').find('img').attr('src',$(this).attr('src'));
 			 xZoom();
@@ -52,7 +65,32 @@ require(['config'],function(){
 		    $content.eq(idx).show().siblings('.content').hide(); // 显示对应的内容
 		});
 
+		var $params = window.location.search;//获取地址栏出来的id
+		var id = $params.substring(4);
+		console.log(id);
+		$.ajax({
+			url:"../api/goods.php",
+			type:"get",
+			data:{
+				id :id
+			},
+			success:function(res){
+				
+				var $res = $.parseJSON(res);
+				console.log($res);
+				console.log($res.imgurl)
 
+				$('.title').html($res.title);
+				$('.saleprice').html('￥'+$res.saleprice);
+				$('.money').html('￥'+$res.price);
+				$('.guid').html($res.guid);
+				$('.salenum').html($res.salenum+'件');
+				$('.bigimg').attr('src',$res.imgurl);
+				$('.smallimg').attr('src',$res.smallimgurl);
+				$('.content1').attr('src',$res.descript);
+				$('.content2').html($res.details);
+			}
+		});
 
 
 	})

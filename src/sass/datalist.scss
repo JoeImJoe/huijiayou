@@ -55,11 +55,12 @@
 		}
 		.goods{
 			ul{width: 958px;box-sizing:border-box;padding: 0 10px 30px 10px;
-				li{float: left;margin-bottom: 30px;
+				li{float: left;margin-bottom: 30px;height: 319px;
 					a{display: block;position: relative;width: 234px;
 						img{width: 234px;height: 234px;}
 						.jingkou{width: 24px;height: 24px;position: absolute;top: 0;left: 0;}
-						b{font-size: 14px;font-weight: normal;width: 214px;color:#333;}
+						b{font-size: 14px;font-weight: normal;width: 214px;color:#333;
+							height: 30px;display: inline-block;}
 						p{font-size: 18px;overflow: hidden;color:#E11F24;
 							del{font-size: 14px;float: right;color:#999;margin-right: 15px;}
 						}
@@ -98,7 +99,7 @@
 							width: 23px;height: 24px;display: block;
 						}
 					div{width: 130px;float: right;height: 80px;box-sizing:border-box;padding-top: 0;
-						p{font-size: 14px;color:#333;margin-bottom: 5px;}
+						p{font-size: 14px;color:#333;margin-bottom: 5px;height: 55px;overflow: hidden;}
 						span{color:#DC0F76;font-size: 18px;}
 					}
 				}

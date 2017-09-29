@@ -1,10 +1,36 @@
 require(['config'],function(){
 	require(['jquery','xcarousel'],function($){
-		$('.top_t_R').hover(function(){
-			$('.buycar').show();
-		},function(){
-			$('.buycar').hide();
+		
+		$('.head').load('html/header.html',function(){
+			//这里的数据是在加载完header页面之后才有的，所以要放在他的回调函数里面
+			$('#buysome').hover(function(){
+				$('.buycar').show();
+			},function(){
+				$('.buycar').hide();
+			});
+
+			var html = `<li><a href="html/datalist.html?kind=flygo">海外购</a></li>
+					<li><a href="html/datalist.html?kind=ele">生活电器</a></li>
+					<li><a href="html/datalist.html?kind=food">品质厨房</a></li>
+					<li><a href="html/datalist.html?kind=ele">厨房电器</a></li>
+					<li><a href="html/datalist.html?kind=cloth">生活家居</a></li>
+					<li><a href="html/datalist.html?kind=cloth">布艺家纺</a></li>
+					<li><a href="html/datalist.html?kind=cloth">服装服饰</a></li>
+					<li><a href="html/datalist.html?kind=cloth">箱包配饰</a></li>
+					<li><a href="html/datalist.html?kind=beauty">美妆个护</a></li>
+					<li><a href="html/datalist.html?kind=food">食品饮料</a></li>
+					<li><a href="html/datalist.html?kind=sport">运动健康</a></li>
+					<li><a href="html/datalist.html?kind=3c">3C数码</a></li>
+					`;
+			$('.typelist').html(html);
+
 		});
+
+
+		$('.foot').load('html/footer.html');
+
+		
+		
 
 		$('.show').xCarousel({
 			imgs:['img/banner1.jpg','img/banner2.jpg','img/banner3.jpg','img/banner4.jpg'],
@@ -67,10 +93,6 @@ require(['config'],function(){
 			type:'fade'
 		});
 
-
-		$('.head').load('html/header.html');
-		$('.foot').load('html/footer.html');
-
 		var $totop = $('.totop');
 		$totop.hide();
 		window.onscroll = ()=>{
@@ -100,11 +122,11 @@ require(['config'],function(){
 			url:"api/goodslist.php",
 			type:"get",
 			success:function(res){
-				console.log($.parseJSON(res));//从php拿到数据
+				// console.log($.parseJSON(res));//从php拿到数据
 				var $res = $.parseJSON(res);
 				var html = $.map($res,function(item,idx){
 					return `	<li>
-								<a href="#"><img src="${item.imgurl}">
+								<a href="./html/details.html?id=${item.id}"><img src="${item.imgurl}">
 								<span>${item.discount}折</span>
 								<b>${item.title}</b>
 								<p>${item.saleprice}<del>${item.price}</del></p>
@@ -116,20 +138,169 @@ require(['config'],function(){
 				$('.showlist').append(html).width($res.length*233);
 				// console.log(233*5)
 				var idx = 0;
-				$('.livenext').click(function(){
+				$('.livenext').first().click(function(){
 					idx++;
 					$('.showlist').stop().animate({left:-idx*1165});
-					console.log(idx)
+					// console.log(idx)
 					if(idx>=3){
 						idx=0;
 					}
 				})
-				$('.liveprev').click(function(){
+				$('.liveprev').first().click(function(){
 					if(idx<=0){idx=3}
 					$('.showlist').stop().animate({left:-idx*1165});
-					console.log(idx)
+					// console.log(idx)
 						idx--;
 				})
+			}
+		});
+
+		$.ajax({
+			url:"api/goodslist.php",
+			type:"get",
+			success:function(res){
+				// console.log($.parseJSON(res));//从php拿到数据
+				var $res = $.parseJSON(res);
+				var html = $.map($res,function(item,idx){
+					return `	<li>
+								<a href="./html/details.html?id=${item.id}"><img src="${item.imgurl}">
+								<span>${item.discount}折</span>
+								<b>${item.title}</b>
+								<p>${item.saleprice}<del>${item.price}</del></p>
+								<strong><p>立即</p><p>抢购</p></strong>
+								</a>
+							</li>`
+				}).join('');
+				
+				$('.showlist2').append(html).width($res.length*233);
+				// console.log(233*5)
+				var idx = 0;
+				$('.livenext').last().click(function(){
+					idx++;
+					$('.showlist2').stop().animate({left:-idx*1165});
+					// console.log(idx)
+					if(idx>=3){
+						idx=0;
+					}
+				})
+				$('.liveprev').last().click(function(){
+					if(idx<=0){idx=3}
+					$('.showlist2').stop().animate({left:-idx*1165});
+					// console.log(idx)
+						idx--;
+				})
+			}
+		});
+
+		$.ajax({
+			url:"api/goodstop5.php",
+			type:"get",
+			data:{
+				type :"'品质家居'"
+			},
+			success:function(res){
+				
+				var $res = $.parseJSON(res);
+				var html = $.map($res,function(item,idx){
+					// console.log(item)
+					return `<li>
+							<i class="first"></i>
+							<a href="./html/details.html?id=${item.id}"><img src="${item.imgurl}">
+							<div><p>${item.title}</p>
+							<span>￥${item.saleprice}</span></div></a>
+						</li>`
+				}).join('');
+				
+				$('.hotlist1').html(html);
+				
+				
+			}
+		});
+
+		$.ajax({
+			url:"api/goodstop5.php",
+			type:"get",
+			data:{
+				type :"'美妆个护'"
+			},
+			success:function(res){
+				var $res = $.parseJSON(res);
+				var html = $.map($res,function(item,idx){
+					return `<li>
+							<i class="first"></i>
+							<a href="./html/details.html?id=${item.id}"><img src="${item.imgurl}">
+							<div><p>${item.title}</p>
+							<span>￥${item.saleprice}</span></div></a>
+						</li>`
+				}).join('');
+				
+				$('.hotlist2').html(html);		
+			}
+		});
+
+		$.ajax({
+			url:"api/goodstop5.php",
+			type:"get",
+			data:{
+				type :"'服装美饰'"
+			},
+			success:function(res){
+			
+				var $res = $.parseJSON(res);
+				var html = $.map($res,function(item,idx){
+					return `<li>
+							<i class="first"></i>
+							<a href="./html/details.html?id=${item.id}"><img src="${item.imgurl}">
+							<div><p>${item.title}</p>
+							<span>￥${item.saleprice}</span></div></a>
+						</li>`
+				}).join('');
+				
+				$('.hotlist3').html(html);		
+			}
+		});
+
+		$.ajax({
+			url:"api/goodstop5.php",
+			type:"get",
+			data:{
+				type :"'食品保健'"
+			},
+			success:function(res){
+				
+				var $res = $.parseJSON(res);
+				var html = $.map($res,function(item,idx){
+					return `<li>
+							<i class="first"></i>
+							<a href="./html/details.html?id=${item.id}"><img src="${item.imgurl}">
+							<div><p>${item.title}</p>
+							<span>￥${item.saleprice}</span></div></a>
+						</li>`
+				}).join('');
+				
+				$('.hotlist4').html(html);		
+			}
+		});
+
+		$.ajax({
+			url:"api/goodstop5.php",
+			type:"get",
+			data:{
+				type :"'生活电器'"
+			},
+			success:function(res){
+				
+				var $res = $.parseJSON(res);
+				var html = $.map($res,function(item,idx){
+					return `<li>
+							<i class="first"></i>
+							<a href="./html/details.html?id=${item.id}"><img src="${item.imgurl}">
+							<div><p>${item.title}</p>
+							<span>￥${item.saleprice}</span></div></a>
+						</li>`
+				}).join('');
+				
+				$('.hotlist5').html(html);		
 			}
 		});
 

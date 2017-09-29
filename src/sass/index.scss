@@ -77,9 +77,12 @@ header{
 				}
 				i{position: absolute;top:0;left: 8px;font-size: 26px;color: $mainColor;}
 			}
+			.top_t_R:hover{
+				.buycar{display: block;}
+			}
 			/*>i{position: absolute;color:#fff;font-size: 30px;bottom:-15px;left:40%;color:$borderColor;}*/
 			.buycar{
-				display: none;background: #fff;z-index: 2;
+				background: #fff;z-index: 2;display: none;
 				border: 1px solid $borderColor;width: 320px;position: absolute;top:45px;right:0;
 				min-height: 60px;line-height: 60px;box-sizing:border-box;
 				i{position: absolute;top:0;left: 20px;font-size: 36px;color:#999;}
