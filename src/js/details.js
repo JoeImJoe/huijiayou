@@ -1,5 +1,5 @@
 require(['config'],function(){
-	require(['jquery','xzoom'],function($){
+	require(['jquery','common','xzoom'],function($,com){
 		
 		$('.head').load('./header.html',function(){
 			//加载完成后执行
@@ -67,7 +67,6 @@ require(['config'],function(){
 
 		var $params = window.location.search;//获取地址栏出来的id
 		var id = $params.substring(4);
-		console.log(id);
 		$.ajax({
 			url:"../api/goods.php",
 			type:"get",
@@ -77,8 +76,8 @@ require(['config'],function(){
 			success:function(res){
 				
 				var $res = $.parseJSON(res);
-				console.log($res);
-				console.log($res.imgurl)
+				// console.log($res);
+				// console.log($res.imgurl)
 
 				$('.title').html($res.title);
 				$('.saleprice').html('￥'+$res.saleprice);
@@ -89,6 +88,117 @@ require(['config'],function(){
 				$('.smallimg').attr('src',$res.smallimgurl);
 				$('.content1').attr('src',$res.descript);
 				$('.content2').html($res.details);
+
+
+				
+				var carlist = [];
+				var cookies = document.cookie;
+				if(cookies.length>0){
+					cookies = cookies.split('; ');
+					cookies.forEach(function(cookie){
+						var temp = cookie.split('=');
+						if(temp[0] === 'carlist'){
+							carlist = JSON.parse(temp[1]);
+						}
+					})
+				}
+
+				render();
+
+				out();	
+
+				function render(){
+					var totalPrice = 0;// 计算总价
+					var totalNum = 0;// 计算总数
+					var car = $('.carlist').get(0);
+					car.innerHTML = '';
+					car.innerHTML = carlist.map(function(item){
+						totalPrice += item.price * item.qty;
+						totalNum +=item.qty*1;
+						return `<li class="clearfix" data-guid="${item.id}">
+									<a href="./details.html?id=${item.id}">
+									<img src="${item.imgurl}" >
+									<span>${item.title}</span></a>
+									<p><span>${item.price} X ${item.qty}</span><b>删除</b></p>
+								</li>`
+					}).join('');
+
+					$('.goodsnum').html(totalNum);
+					var goodstotal = document.querySelector('#goodstotal');
+					goodstotal.innerHTML = totalPrice;
+
+					$('.buycar').show();
+				}
+
+				$('.buycar').on('click','b',function(){
+
+					var currentLi = $(this).parent().parent()[0];
+					$(this).parent().parent().remove();
+					var guid = currentLi.getAttribute('data-guid');
+					console.log(guid);
+					for(var i=0;i<carlist.length;i++){console.log(666)
+						if(carlist[i].id === guid){
+							carlist.splice(i,1);
+							break;
+						}
+					}
+					var date = new Date();
+					date.setDate(date.getDate()+7);
+					document.cookie = 'carlist=' + JSON.stringify(carlist) + ';expires=' + date.toUTCString() +';path = '/'';
+					// $('.carlist').get(0).innerHTML = '';
+					// location.reload();
+					render();
+					out();
+				});
+				
+				$('.gocar').click(function(){
+					location.href = '../html/buycar.html';
+				});
+				function out(){
+					var buycar = $('.buycar').get(0);
+					if($('.carlist').children().length==0){
+						$('.something').hide();
+					}else{
+						$('.nothing').hide();
+					}
+				}
+				
+				var add2car = document.getElementById('add2car');
+				add2car.onclick = function(){
+
+					if($('.carlist').children().length==0){
+						 location.reload();
+					}
+					var guid = $res.guid;
+					// 判断当前guid是否已经存在于carlist中
+					// 如果存在，找到这个商品，并且数量+1
+					// 如果不存，则添加一个商品到carlist中（默认数量为1）
+					var has = false;
+					for(var i=0;i<carlist.length;i++){
+						// 已经存在
+						if(carlist[i].guid === guid){
+							carlist[i].qty++;
+							has=true;
+							break;
+						}
+					}
+					if(!has){// 不存在
+						var goods = {
+							imgurl:$res.imgurl,
+							title:$res.title,
+							price:$res.saleprice,
+							qty:$res.qty,
+							id:$res.id,
+							guid:guid
+						}
+						carlist.push(goods)
+					}
+					var date = new Date();// 写入cookie
+					date.setDate(date.getDate()+7);
+					document.cookie = 'carlist=' + JSON.stringify(carlist) + ';expires=' + date.toUTCString() +';path = '/'';
+					render();
+				};
+
 			}
 		});
 

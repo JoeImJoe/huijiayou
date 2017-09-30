@@ -1,0 +1,62 @@
+@import 'var';
+
+
+.main{
+	.buycar{padding:0 30px;
+		h2{height: 55px;line-height: 55px;font-size: 12px;color:#333;}
+		ul{	width: 1138px;min-height: 42px;
+			.th{border-top:1px solid #D6D6D6;background: #F1F1F1;
+				label{float: left;width: 96px;border-left:1px solid #D6D6D6;height: 43px;
+					line-height: 43px;text-align: center;font-size: 12px;color:#333;}
+				p{float: left;height: 43px;line-height: 43px;text-align: center;font-size: 12px;color:#333;}
+				.th_goods{width: 560px;}
+				.th_price{width: 125px;}
+				.th_num{width: 150px;}
+				.th_total{width: 105px;}
+				.th_do{width: 100px;border-right:1px solid #D6D6D6;}
+			}
+			.goods{border-bottom:1px solid #D6D6D6;background: #FFFCEB;
+				.label_che{float: left;width: 50px;border-left:1px solid #D6D6D6;height: 116px;
+					line-height: 116px;text-align: center;font-size: 12px;color:#333;padding-left: 10px;}
+				.goods_goods{float: left;height: 84px;padding: 16px 0;
+					line-height: 84px;text-align: center;font-size: 12px;color:#333;width: 596px;
+					p{height: 42px;line-height: 42px;}
+					.goods_title{float: left;margin-top: 10px;
+						&:hover{color:#DC0F50;}
+					}
+					.goods_ele{float: right;width: 135px;
+						span{display: block;font-size: 12px;color:#333;height: 12px;}
+					}
+					img{width: 83px;height: 83px;margin-right: 10px;float: left;}
+				}
+				b{height: 116px;line-height: 116px;float: left;text-align: center;font-size: 12px;}
+				.goods_price{width: 125px;}
+				.goods_total{width: 105px;color:#DC0F50;}
+				.goods_do{padding: 43px 0px 43px 34px;float: left;text-align: center;width: 116px;
+					span{float: left;width: 27px;height: 28px;border:1px solid #D6D6D6;}
+					input{float: left;width: 18px;height: 28px;border:0 none;border-top:1px solid #D6D6D6;
+						border-bottom:1px solid #D6D6D6;padding-left: 12px;}
+				}
+				.good_del{float: left;padding: 16px 0;height: 84px;line-height: 84px;width: 100px;
+					border-right:1px solid #D6D6D6;text-align: center;font-size: 12px;color:#333;
+					&:hover{color:#DC0F50;}
+				}
+			}
+		}
+	}
+	.ft{margin: 23px 112px 20px 112px;height: 52px;
+		label{float: left;width: 75px;height: 52px;font-size: 12px;color:#333;line-height: 52px;}
+		>span{float: left;font-size: 12px;color:#333;margin-top: 18px;}
+		div{float: right;
+			>span{font-size: 18px;color:#999;margin-right: 15px;}
+			.total_num{color:#DC0F50;font-weight: normal;}
+			.total_price{color:#DC0F50;font-size: 24px;}
+			button{display:inline-block;border:0 none;background: $mainColor;width: 120px;
+					height: 52px;outline: none;font-size: 18px;color:#fff;
+					&:hover{background:#E23E72;}
+				}
+		}
+	}
+	.ft.fixed{position: fixed;bottom: 0;height: 52px;margin: 0;z-index: 3;
+		padding: 0 112px;width: 1125px;background: #fff;}
+}

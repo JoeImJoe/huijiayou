@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* 存放全局变量 */
+.main .buycar { padding: 0 30px; }
+
+.main .buycar h2 { height: 55px; line-height: 55px; font-size: 12px; color: #333; }
+
+.main .buycar ul { width: 1138px; min-height: 42px; }
+
+.main .buycar ul .th { border-top: 1px solid #D6D6D6; background: #F1F1F1; }
+
+.main .buycar ul .th label { float: left; width: 96px; border-left: 1px solid #D6D6D6; height: 43px; line-height: 43px; text-align: center; font-size: 12px; color: #333; }
+
+.main .buycar ul .th p { float: left; height: 43px; line-height: 43px; text-align: center; font-size: 12px; color: #333; }
+
+.main .buycar ul .th .th_goods { width: 560px; }
+
+.main .buycar ul .th .th_price { width: 125px; }
+
+.main .buycar ul .th .th_num { width: 150px; }
+
+.main .buycar ul .th .th_total { width: 105px; }
+
+.main .buycar ul .th .th_do { width: 100px; border-right: 1px solid #D6D6D6; }
+
+.main .buycar ul .goods { border-bottom: 1px solid #D6D6D6; background: #FFFCEB; }
+
+.main .buycar ul .goods .label_che { float: left; width: 50px; border-left: 1px solid #D6D6D6; height: 116px; line-height: 116px; text-align: center; font-size: 12px; color: #333; padding-left: 10px; }
+
+.main .buycar ul .goods .goods_goods { float: left; height: 84px; padding: 16px 0; line-height: 84px; text-align: center; font-size: 12px; color: #333; width: 596px; }
+
+.main .buycar ul .goods .goods_goods p { height: 42px; line-height: 42px; }
+
+.main .buycar ul .goods .goods_goods .goods_title { float: left; margin-top: 10px; }
+
+.main .buycar ul .goods .goods_goods .goods_title:hover { color: #DC0F50; }
+
+.main .buycar ul .goods .goods_goods .goods_ele { float: right; width: 135px; }
+
+.main .buycar ul .goods .goods_goods .goods_ele span { display: block; font-size: 12px; color: #333; height: 12px; }
+
+.main .buycar ul .goods .goods_goods img { width: 83px; height: 83px; margin-right: 10px; float: left; }
+
+.main .buycar ul .goods b { height: 116px; line-height: 116px; float: left; text-align: center; font-size: 12px; }
+
+.main .buycar ul .goods .goods_price { width: 125px; }
+
+.main .buycar ul .goods .goods_total { width: 105px; color: #DC0F50; }
+
+.main .buycar ul .goods .goods_do { padding: 43px 0px 43px 34px; float: left; text-align: center; width: 116px; }
+
+.main .buycar ul .goods .goods_do span { float: left; width: 27px; height: 28px; border: 1px solid #D6D6D6; }
+
+.main .buycar ul .goods .goods_do input { float: left; width: 18px; height: 28px; border: 0 none; border-top: 1px solid #D6D6D6; border-bottom: 1px solid #D6D6D6; padding-left: 12px; }
+
+.main .buycar ul .goods .good_del { float: left; padding: 16px 0; height: 84px; line-height: 84px; width: 100px; border-right: 1px solid #D6D6D6; text-align: center; font-size: 12px; color: #333; }
+
+.main .buycar ul .goods .good_del:hover { color: #DC0F50; }
+
+.main .ft { margin: 23px 112px 20px 112px; height: 52px; }
+
+.main .ft label { float: left; width: 75px; height: 52px; font-size: 12px; color: #333; line-height: 52px; }
+
+.main .ft > span { float: left; font-size: 12px; color: #333; margin-top: 18px; }
+
+.main .ft div { float: right; }
+
+.main .ft div > span { font-size: 18px; color: #999; margin-right: 15px; }
+
+.main .ft div .total_num { color: #DC0F50; font-weight: normal; }
+
+.main .ft div .total_price { color: #DC0F50; font-size: 24px; }
+
+.main .ft div button { display: inline-block; border: 0 none; background: #DC0F50; width: 120px; height: 52px; outline: none; font-size: 18px; color: #fff; }
+
+.main .ft div button:hover { background: #E23E72; }
+
+.main .ft.fixed { position: fixed; bottom: 0; height: 52px; margin: 0; z-index: 3; padding: 0 112px; width: 1125px; background: #fff; }

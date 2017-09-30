@@ -39,6 +39,68 @@ require(['config'],function(){
 				$('.buycar').hide();
 			});
 
+			var carlist = [];
+			var cookies = document.cookie;
+			if(cookies.length>0){
+				cookies = cookies.split('; ');
+				cookies.forEach(function(cookie){
+					var temp = cookie.split('=');
+					if(temp[0] === 'carlist'){
+						carlist = JSON.parse(temp[1]);
+						console.log(temp[1])
+					}
+				})
+			};
+			
+			function render(){
+				var totalPrice = 0;// 计算总价
+				var totalNum = 0;// 计算总数
+				var car = $('.carlist').get(0);
+				car.innerHTML = carlist.map(function(item){
+					totalPrice += item.price * item.qty;
+					totalNum +=item.qty*1;
+					return `<li class="clearfix">
+								<a href="./details.html?id=${item.id}">
+								<img src="${item.imgurl}" >
+								<span>${item.title}</span></a>
+								<p><span>${item.price} X ${item.qty}</span><b>删除</b></p>
+							</li>`
+				}).join('');
+
+				$('.goodsnum').html(totalNum);
+				var goodstotal = document.querySelector('#goodstotal');
+				goodstotal.innerHTML = totalPrice;
+
+				// $('.buycar').show();
+			};
+			render();
+			function out(){
+				var buycar = $('.buycar').get(0);
+				if($('.carlist').children().length==0){
+					$('.something').hide();
+				}else{
+					$('.nothing').hide();
+				}
+			}
+			out();
+			$('.buycar').on('click','b',function(){
+
+				$(this).parent().parent().remove();
+				var date = new Date();
+				date.setDate(date.getDate()-15);
+				document.cookie = 'carlist=' + JSON.stringify(carlist) + ';expires=' + date.toUTCString() +';path = '/'';
+				
+				 location.reload();
+				
+				// render();
+				out();
+				console.log(777)
+			});
+			
+			$('.gocar').click(function(){
+				location.href = '../html/buycar.html';
+			});
+
 		});
 
 		$('.foot').load('./footer.html');
